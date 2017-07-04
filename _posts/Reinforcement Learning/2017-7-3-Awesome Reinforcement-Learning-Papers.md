@@ -1,13 +1,10 @@
 ---
 layout: post
-title: Awesome Reinforcement Learning Papers
+title: Awesome Reinforcement Learning Papers-WIP
 date: 2017-7-4
 tags:
   - Reinforcement Learning
 ---
-
-
-# Awesome Reinforcement Learning and some others Papers - WIP
 
 ## 1. Value Function Approximation
 
