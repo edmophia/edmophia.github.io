@@ -3,10 +3,8 @@ layout: page
 title: About Me
 ---
 
-## About Us
-<img src="img/profile.JPG" alt="Drawing" style="width: 300px;"/>
+## About me
 
-About Sung-Yub
 Hello. My name is Sung-Yub Kim.
 I am a graduate student in [MS/Optimization Lab in SNU](http://polytope.snu.ac.kr).
 My interests are Reinforcement Learning(especially entropy-regularized RL), Bayesian Deep Learning.
