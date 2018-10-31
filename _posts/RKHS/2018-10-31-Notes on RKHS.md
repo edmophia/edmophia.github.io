@@ -31,7 +31,7 @@ So from now on, we would like to understand this diagram completely!!!
 
 <img src="img/three_view.png" height="150px">
 
-* Feature map ($\phi : \mathcal{X}\rightarrow \mathbb{R}^d$): Yeah, that **feature map** which we encounter in machine learning everyday.
+* Feature map $(\phi : \mathcal{X}\rightarrow \mathbb{R}^d)$: Yeah, that **feature map** which we encounter in machine learning everyday.
 * Kernel : We already define what kernel means mathematically. Although this is enough to progress our story, stop here and check what situation do we meet kernel in detailed setting.
 
 ### Predict, Experience and Backpropagate
