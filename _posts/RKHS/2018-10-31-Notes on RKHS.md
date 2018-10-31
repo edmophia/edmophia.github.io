@@ -43,38 +43,61 @@ $$
 where $w \in \mathbb{R}^d$ is *weight vector*.
 
 Now given answer of the predictions $y_1, \cdots, y_n$ for inputs $x_1, \cdots, x_n$ , our model **experience** loss by
+
+
 $$
 L(w) = \frac{1}{n} \sum_{i=1}^n \frac{1}{2}\big( y_i - \big< w, \phi(x_i) \big> \big)^2
 $$
+
+
 and the **gradient** of this loss is
+
+
 $$
 \begin{eqnarray}
 \nabla_w L(w) &= \frac{1}{n} \sum_{i=1}^n (y_i - \big< w, \phi(x_i) \big>)\phi(x_i)\\
 &= \frac{1}{n} \sum_{i=1}^n \alpha_i \phi(x_i)
 \end{eqnarray}
 $$
+
+
 where $\alpha_i = y_i - \big< w, \phi(x_i) \big>$ is a kind of *prediction error*.
 
 If our optimization algorithm use only gradient information, the *approximate optimal solution* would be
+
+
 $$
 w^{OPT} = \sum_{t=1}^T\sum_{i=1}^n \alpha^t_i \phi(x_i)
 $$
 
 
+
 where $\alpha_i^t$ means prediction error of $i$-th data in $t$-th prediction.
 
 So back to our *approximate optimal solution* the prediction can be denoted as
+
+
 $$
 \hat{y} = \big<w^{OPT}, \phi(x)\big> = \big< \sum_{t=1}^T\sum_{n=1}^n \alpha_i^t\phi(x_i), \phi(x)\big> = \sum_{t=1}^T\sum_{n=1}^n \alpha_i^t \big< \phi(x_i), \phi(x) \big>
 $$
+
+
 So if we define $k: \mathcal{X} \times \mathcal{X} \rightarrow \mathbb{R}$ as 
+
+
 $$
 k(x_i,x_j) \dot{=} \big< \phi(x_i),\phi(x_j)\big>
 $$
+
+
 the equation (6) is 
+
+
 $$
 \hat{y} =\sum_{t=1}^T\sum_{n=1}^n \alpha_i^t k(x_i, x).
 $$
+
+
 
 * Note: Soon we will see that $k(\cdot, \cdot)$ in equation (7) is a PSD kernel in the very first definition.
 
@@ -104,9 +127,13 @@ Now take an example of linear functional.
 > **Definition** Evaluation functional
 >
 > Let $\mathcal{H}$ is an Hilbert space consisting of functions $f: \mathcal{X} \rightarrow \mathbb{R}$. For each $x \in \mathcal{X}$, we can define the **evaluation functional** $L_x : \mathcal{H} \rightarrow \mathbb{R}$ as
+>
+>
 > $$
 > L_x(f) \dot{=} f(x)
 > $$
+>
+>
 > Note that the evaluation functional is a linear functional, i.e. $L_x(cf + g) = c L_x(f) + L_x(g), \forall f,g \in \mathcal{H}, \forall c \in \mathbb{R}$.
 
 
@@ -116,6 +143,8 @@ If a linear functional is **bounded** (or equivalently **continuous**), we can d
 > **Definition** Bounded functional
 >
 > Given a Hilbert space $\mathcal{H}$, a functional $L : \mathcal{H} \rightarrow \mathbb{R}$ is bounded if and only if there exists an $M < \infty$ suct that 
+>
+>
 > $$
 > | L(f) | \le M \|f\|_{\mathcal{H}}, \forall f \in \mathcal{H}
 > $$
