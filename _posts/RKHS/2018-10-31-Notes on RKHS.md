@@ -10,7 +10,10 @@ mathjax: true
 
 ---
 
-[TOC]
+- [Notes on RKHS](#notes-on-rkhs)
+  * [What is Kernel?](#what-is-kernel-)
+  * [Three views on RKHS](#three-views-on-rkhs)
+    + [Predict, Experience and Backpropagate](#predict--experience-and-backpropagate)
 
 # Notes on RKHS
 
