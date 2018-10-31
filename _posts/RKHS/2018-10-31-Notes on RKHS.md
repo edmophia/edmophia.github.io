@@ -6,9 +6,9 @@ date: 2018-10-31
 tags: RKHS
 mathjax: true
 
-  - Reinforcement Learning
-
 ---
+
+* **Remark** : This post is a rearrangement of Percy Liang's statistical learning theory course 2016 (https://web.stanford.edu/class/cs229t/notes.pdf).
 
 - [Notes on RKHS](#notes-on-rkhs)
   * [What is Kernel?](#what-is-kernel-)
