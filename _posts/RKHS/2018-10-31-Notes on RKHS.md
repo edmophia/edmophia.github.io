@@ -2,7 +2,7 @@
 
 layout: post
 title: Notes on RKHS-WIP
-date: 2017-7-4
+date: 2018-10-31
 tags: RKHS
 mathjax: true
 
