@@ -3,7 +3,7 @@
 layout: post
 title: Notes on RKHS-WIP
 date: 2017-7-4
-tags:
+tags: RKHS
 mathjax: true
 
   - Reinforcement Learning
