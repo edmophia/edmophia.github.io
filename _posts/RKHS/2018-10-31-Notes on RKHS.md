@@ -1,9 +1,10 @@
 ---
 
 layout: post
-title: Awesome Reinforcement Learning Papers-WIP
+title: Notes on RKHS-WIP
 date: 2017-7-4
 tags:
+mathjax: true
 
   - Reinforcement Learning
 
