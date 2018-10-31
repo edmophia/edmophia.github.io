@@ -38,7 +38,9 @@ So from now on, we would like to understand this diagram completely!!!
 
 Now assume that we **predict** the output $y \in \mathbb{R}$ by
 $$
+\begin{eqnarray}
 \hat{y} = \big< w, \phi(x) \big>
+\end{eqnarray}
 $$
 where $w \in \mathbb{R}^d$ is *weight vector*.
 
@@ -46,7 +48,9 @@ Now given answer of the predictions $y_1, \cdots, y_n$ for inputs $x_1, \cdots, 
 
 
 $$
+\begin{eqnarray}
 L(w) = \frac{1}{n} \sum_{i=1}^n \frac{1}{2}\big( y_i - \big< w, \phi(x_i) \big> \big)^2
+\end{eqnarray}
 $$
 
 
@@ -67,7 +71,9 @@ If our optimization algorithm use only gradient information, the *approximate op
 
 
 $$
+\begin{eqnarray}
 w^{OPT} = \sum_{t=1}^T\sum_{i=1}^n \alpha^t_i \phi(x_i)
+\end{eqnarray}
 $$
 
 
@@ -78,7 +84,9 @@ So back to our *approximate optimal solution* the prediction can be denoted as
 
 
 $$
+\begin{eqnarray}
 \hat{y} = \big<w^{OPT}, \phi(x)\big> = \big< \sum_{t=1}^T\sum_{n=1}^n \alpha_i^t\phi(x_i), \phi(x)\big> = \sum_{t=1}^T\sum_{n=1}^n \alpha_i^t \big< \phi(x_i), \phi(x) \big>
+\end{eqnarray}
 $$
 
 
@@ -86,7 +94,9 @@ So if we define $k: \mathcal{X} \times \mathcal{X} \rightarrow \mathbb{R}$ as
 
 
 $$
+\begin{eqnarray}
 k(x_i,x_j) \dot{=} \big< \phi(x_i),\phi(x_j)\big>
+\end{eqnarray}
 $$
 
 
@@ -94,7 +104,9 @@ the equation (6) is
 
 
 $$
+\begin{eqnarray}
 \hat{y} =\sum_{t=1}^T\sum_{n=1}^n \alpha_i^t k(x_i, x).
+\end{eqnarray}
 $$
 
 
@@ -130,7 +142,9 @@ Now take an example of linear functional.
 >
 >
 > $$
+> \begin{eqnarray}
 > L_x(f) \dot{=} f(x)
+> \end{eqnarray}
 > $$
 >
 >
@@ -146,7 +160,9 @@ If a linear functional is **bounded** (or equivalently **continuous**), we can d
 >
 >
 > $$
+> \begin{eqnarray}
 > | L(f) | \le M \|f\|_{\mathcal{H}}, \forall f \in \mathcal{H}
+> \end{eqnarray}
 > $$
 >
 
