@@ -282,7 +282,7 @@ Now our last direction is kernel-RKHS, i.e. a kernel defines RKHS uniquely.
 >
 >
 >
-> Now we need  **inner product** and **bounded for evaluation functional** for RKHS. (In here, we will not proof uniqueness.)
+> Now we need  **inner product** and **bounded for evaluation functional** for RKHS. (In here, we will not prove the uniqueness.)
 >
 > First, **inner product** can be defined as
 > $$
