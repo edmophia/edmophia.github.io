@@ -16,6 +16,7 @@ mathjax: true
     + [Predict, Experience and Backpropagate](#predict--experience-and-backpropagate)
     + [Feature map defines a kernel](#feature-map-defines-a-kernel)
     + [The Riesz Representation Theorem](#the-riesz-representation-theorem)
+    + [Moore-Aronszajn Theorem](#moore-aronszajn-theorem)
 
 # Notes on RKHS
 
@@ -208,7 +209,7 @@ So our main subject **Reproducing Kernel Hilbert Space** (RKHS) demand that *any
 
 
 
-## The Riesz Representation Theorem
+## Moore-Aronszajn TheoremThe Riesz Representation Theorem
 
 
 
@@ -259,19 +260,79 @@ Now our last direction is kernel-RKHS, i.e. a kernel defines RKHS uniquely.
 
 > **Theorem** Moore-Aronszajn Theorem
 >
-> Given a kernel $k(\cdot, \cdot)$, there exists a unique Hilbret space of functions on $\mathcal{X}$ for which $k(\cdot,\cdot)$ is a **reproducing kernel.**
+> Given a kernel $k(\cdot, \cdot)$, there exists a (unique) Hilbret space of functions on $\mathcal{X}$ for which $k(\cdot,\cdot)$ is a **reproducing kernel.**
 
 > **proof**. We want to construct a RKHS $\mathcal{H}$ from the set of functions $\{k(x,\cdot): x\in \mathcal{X}\}$ .
 >
 > Let's define $\mathcal{H}_0$ as a finite linear combinations of the form
 > $$
+> \begin{eqnarray}
 > f(x) = \sum_{i=1}^n \alpha_i k(x_i, x)
+> \end{eqnarray}
 > $$
-> where $n \in \mathbb{N}$, $\alpha_1, \cdots, \alpha_n \in \mathbb{R}$ and $x_1, \cdots, x_n \in \mathcal{X}$. Then $\mathcal{H}_0$ is a vector space. Consider $\mathcal{H}$ which is the completion of $\mathcal{H}_0$. Then we need  **inner product** and **bounded for evaluation functional** for RKHS.
+> where $n \in \mathbb{N}$, $\alpha_1, \cdots, \alpha_n \in \mathbb{R}$ and $x_1, \cdots, x_n \in \mathcal{X}$. Then $\mathcal{H}_0$ is a vector space. 
 >
-> First, inner product can be defined as
+> Consider $\mathcal{H}$ which is the completion of $\mathcal{H}_0$. Then $\mathcal{H}$ consists of functions of the form
 > $$
-> \big< f, g \big> \dot{=} \sum_{i=1}^m \sum_{j=1}^{n} \alpha_i \beta_j k(x_i, x_j')
+> \begin{eqnarray}
+> f(x) = \sum_{i=1}^{\infty} \alpha_i k(x_i, x)
+> \end{eqnarray}
 > $$
-> for $$f(x) = \sum_{i=1}^m \alpha_i k(x_i, x)$$ and $$g(x) = \sum_{j=1}^{n} \beta_j k(x_j',x)$$. Then, the symmetry and linearity of inner product follows from the definition of the inner product. 
+> where $$\sum_{i=1}^{\infty}\alpha_i^2 k(x_i, x_i) < \infty$$ by Cauchy-Schwartz inequality.
+>
+>
+>
+> Now we need  **inner product** and **bounded for evaluation functional** for RKHS. (In here, we will not proof uniqueness.)
+>
+> First, **inner product** can be defined as
+> $$
+> \begin{eqnarray}
+> \big< f, g \big> \dot{=} \sum_{i=1}^{\infty} \sum_{j=1}^{\infty} \alpha_i \beta_j k(x_i, x_j')
+> \end{eqnarray}
+> $$
+> for $$f(x) = \sum_{i=1}^m \alpha_i k(x_i, x)$$ and $$g(x) = \sum_{j=1}^{n} \beta_j k(x_j',x)$$. Then, the symmetry and linearity of inner product follows from the definition of the inner product.
+>
+> For positive definiteness, 
+>
+> 1. For any $f\in \mathcal{H}$, $\big< f, f \big> = \alpha^{\top} K \alpha \ge 0$ 
+>
+> 2. If $\big< f , f \big> = \alpha^{\top} K \alpha = 0$, we check positive definiteness by observing a more component $y$. 
+>    Since k is a kernel, 
+>    $$
+>    \begin{eqnarray}
+>    \begin{bmatrix}
+>        K       & c^{\top} \\
+>        c       & k(y, y) 
+>    \end{bmatrix} \succeq 0
+>    \end{eqnarray}
+>    $$
+>    where $c = [k(x_1, y), \cdots, k(x_m,y)]^{\top}$.
+>
+>    Therefore, we have
+>    $$
+>    \begin{eqnarray}
+>    \alpha^{\top}K\alpha + 2(c^{\top}\alpha)b + k(y,y)b^2 \ge 0\\
+>    2(c^{\top}\alpha)b + k(y,y)b^2 \ge 0
+>    \end{eqnarray}
+>    $$
+>    for all $b$.
+>    If $c^{\top}\alpha >0$, then negative $b$ whose absolute value is sufficiently small makes equation (27) contradiction.
+>
+>    If $c^{\top}\alpha <0$, then positive $b$ whose absolute value is sufficiently small makes equation (27) contradiction.
+>
+>    Therefore, $f_m(y) = c^{\top}\alpha = 0, \forall m \in \mathbb{N}$  and $f(y) = \lim_{m\rightarrow \infty}f_m(y) = 0$  .
+>
+> To check **bounded for evaluation functionals**, 
+> $$
+> \begin{eqnarray}
+> L_x(f) &= f(x)\\
+> &= \sum_{i=1}^{m} \alpha_i k(x_i, x)\\
+> &= \big< f, k(x, \cdot)\big>\\
+> &\le \|f\|_{\mathcal{H}}\|k(x,\cdot)\|_{\mathcal{H}}\\
+> &=  \|f\|_{\mathcal{H}} k(x,x). \square
+> \end{eqnarray}
+> $$
+>
+
+
 
