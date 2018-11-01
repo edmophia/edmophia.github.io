@@ -290,7 +290,7 @@ Now our last direction is kernel-RKHS, i.e. a kernel defines RKHS uniquely.
 > \big< f, g \big> \dot{=} \sum_{i=1}^{\infty} \sum_{j=1}^{\infty} \alpha_i \beta_j k(x_i, x_j')
 > \end{eqnarray}
 > $$
-> for $$f(x) = \sum_{i=1}^m \alpha_i k(x_i, x)$$ and $$g(x) = \sum_{j=1}^{n} \beta_j k(x_j',x)$$. Then, the symmetry and linearity of inner product follows from the definition of the inner product.
+> for $$f(x) = \sum_{i=1}^{\infty} \alpha_i k(x_i, x)$$ and $$g(x) = \sum_{j=1}^{\infty} \beta_j k(x_j',x)$$. Then, the symmetry and linearity of inner product follows from the definition of the inner product.
 >
 > For positive definiteness, 
 >
