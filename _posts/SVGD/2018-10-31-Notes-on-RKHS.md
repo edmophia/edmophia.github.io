@@ -14,6 +14,7 @@ mathjax: true
   * [What is Kernel?](#what-is-kernel-)
   * [Three views on RKHS](#three-views-on-rkhs)
     + [Predict, Experience and Backpropagate](#predict--experience-and-backpropagate)
+    + [Feature map defines a kernel](#feature-map-defines-a-kernel)
     + [The Riesz Representation Theorem](#the-riesz-representation-theorem)
 
 # Notes on RKHS
@@ -112,7 +113,7 @@ $$
 \end{eqnarray}
 $$
 
-
+## Feature map defines a kernel
 
 We have more general statement about equation (9) and (10).
 
@@ -234,7 +235,7 @@ f(x) = L_x(f) = \big< f, R_x\big>, \forall f \in \mathcal{H}.
 \end{eqnarray}
 $$
 
-* Note: $R_x$ also lives in RKHS. So if we have two points $x_i, x_j \in \mathcal{X}$
+* Note1: $R_x$ also lives in RKHS. So if we have two points $x_i, x_j \in \mathcal{X}$
   $$
   \begin{eqnarray}
   R_{x_i}(x_j) &= L_{x_j}(R_{x_i})\\
@@ -244,4 +245,33 @@ $$
   &= R_{x_j}(x_i).
   \end{eqnarray}
   $$
-  And this can be seen as an inner product of two maps (in fact these are **feature maps**) $R_{x_i}, R_{x_j}\in \mathcal{H}$. In equation (9), we saw that an inner product of two feature maps is a kernel.
+  And this can be seen as an inner product of two maps (in fact these are **feature maps**) $R_{x_i}, R_{x_j}\in \mathcal{H}$. In equation (11), we saw that an inner product of two feature maps is a kernel.
+
+* Note2: The kernel in equation (20) is called **reproducing kernel**.
+
+
+
+## Moore-Aronszajn Theorem
+
+Now our last direction is kernel-RKHS, i.e. a kernel defines RKHS uniquely.
+
+
+
+> **Theorem** Moore-Aronszajn Theorem
+>
+> Given a kernel $k(\cdot, \cdot)$, there exists a unique Hilbret space of functions on $\mathcal{X}$ for which $k(\cdot,\cdot)$ is a **reproducing kernel.**
+
+> **proof**. We want to construct a RKHS $\mathcal{H}$ from the set of functions $\{k(x,\cdot): x\in \mathcal{X}\}$ .
+>
+> Let's define $\mathcal{H}_0$ as a finite linear combinations of the form
+> $$
+> f(x) = \sum_{i=1}^n \alpha_i k(x_i, x)
+> $$
+> where $n \in \mathbb{N}$, $\alpha_1, \cdots, \alpha_n \in \mathbb{R}$ and $x_1, \cdots, x_n \in \mathcal{X}$. Then $\mathcal{H}_0$ is a vector space. Consider $\mathcal{H}$ which is the completion of $\mathcal{H}_0$. Then we need  **inner product** and **bounded for evaluation functional** for RKHS.
+>
+> First, inner product can be defined as
+> $$
+> \big< f, g \big> \dot{=} \sum_{i=1}^m \sum_{j=1}^{n} \alpha_i \beta_j k(x_i, x_j')
+> $$
+> for $$f(x) = \sum_{i=1}^m \alpha_i k(x_i, x)$$ and $$g(x) = \sum_{j=1}^{n} \beta_j k(x_j',x)$$. Then, the symmetry and linearity of inner product follows from the definition of the inner product. 
+
