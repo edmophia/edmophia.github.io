@@ -3,7 +3,7 @@
 layout: post
 title: Notes on RKHS (Part 1)
 date: 2018-10-31
-tags: RKHS
+tags: Stein Variational Gradient Descent
 mathjax: true
 
 ---
