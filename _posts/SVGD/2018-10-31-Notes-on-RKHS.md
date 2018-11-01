@@ -14,9 +14,9 @@ mathjax: true
   * [What is Kernel?](#what-is-kernel-)
   * [Three views on RKHS](#three-views-on-rkhs)
     + [Predict, Experience and Backpropagate](#predict--experience-and-backpropagate)
-    + [Feature map defines a kernel](#feature-map-defines-a-kernel)
-    + [The Riesz Representation Theorem](#the-riesz-representation-theorem)
-    + [Moore-Aronszajn Theorem](#moore-aronszajn-theorem)
+  * [Feature map defines a kernel](#feature-map-defines-a-kernel)
+  * [The Riesz Representation Theorem](#the-riesz-representation-theorem)
+  * [Moore-Aronszajn Theorem](#moore-aronszajn-theorem)
 
 # Notes on RKHS
 
@@ -114,7 +114,7 @@ $$
 \end{eqnarray}
 $$
 
-## Feature map defines a kernel
+# Feature map defines a kernel
 
 We have more general statement about equation (9) and (10).
 
@@ -209,7 +209,7 @@ So our main subject **Reproducing Kernel Hilbert Space** (RKHS) demand that *any
 
 
 
-## Moore-Aronszajn TheoremThe Riesz Representation Theorem
+# Moore-Aronszajn TheoremThe Riesz Representation Theorem
 
 
 
