@@ -114,7 +114,30 @@ $$
 
 
 
-* Note: Soon we will see that $k(\cdot, \cdot)$ in equation (9) is a PSD kernel in the very first definition.
+We have more general statement about equation (9) and (10).
+
+> **Theorem** Feature map defines a kernel.
+>
+> If $\phi : \mathcal{X} \rightarrow \mathbb{R}^d$ is a feature map, then 
+> $$
+> \begin{eqnarray}
+> k(x_i, x_j) \dot{=} \big< \phi(x_i), \phi(x_j) \big>
+> \end{eqnarray}
+> $$
+> is a kernel.
+
+
+
+> **proof**. Since kernel is determined by any principal submatrix, we only need to check arbitrary finite observation point $x_1, \cdots, x_n \in \mathcal{X}$. 
+>
+> If we define a kernel matrix $K$ as $K_{ij} = \big< \phi(x_i), \phi(x_j)\big>$, we have
+> $$
+> \begin{eqnarray}
+> \alpha^{\top} K \alpha &= \sum_{i=1}^n \sum_{j=1}^n \alpha_i \alpha_j \big<\phi(x_i), \phi(x_j) \big>\\
+> &= \big<\sum_{i=1}^n \alpha_i\phi(x_i), \sum_{j=1}^n \alpha_j \phi(x_j) \big> \ge 0. \square
+> \end{eqnarray}
+> $$
+>
 
 
 
@@ -130,7 +153,7 @@ Now back to the three views on RKHS, we define our main subject **Reproducing Ke
 > 2. **(Linearity)** $\big<c_1x_1, c_2x_2, y\big> = c_1 \big< x_1, y\big> + c_2 \big< x_2, y\big>$,  $\forall x_1,x_2,y \in \mathcal{H}, \forall c_1, c_2 \in \mathbb{F}$.
 > 3. **(Positive Definite)** $\big< x, x \big> \ge 0$ and equality holds only if $x = 0$.
 
-* Note1: In here, the Hilbert space $\mathcal{H}$ usually means **good functions** whose domain is $\mathcal{X}$ and codomain is $\mathbb{R}^d$. (We don't need to worry about what is good, but we can think our Hilbert space is $L^2$,in most time. ) 
+* Note1: In here, the Hilbert space $\mathcal{H}$ usually means **good functions** whose domain is $\mathcal{X}$ and codomain is $\mathbb{R}^d$. We don't need to worry about what is good, but we can think our Hilbert space is $L^2$,in most time.
 * Note2: The inner product of a Hilbert space $\mathcal{H}$ gives a natural norm $$\|x\|_{\mathcal{H}} = \sqrt{\big<x,x\big>}$$.
 * Note3: The natural norm in Note1 gives a natural metric $$d_{\mathcal{H}}(x,y) = \|x-y\|_{\mathcal{H}}$$. So the complete vector space in above definition actually means *complete metric space*, any cauchy sequence converges. 
 
