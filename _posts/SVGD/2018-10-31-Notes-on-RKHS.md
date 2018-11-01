@@ -30,14 +30,12 @@ mathjax: true
 
 So from now on, we would like to understand this diagram completely!!!
 
-{% mermaid %}
-
-graph TD;
-​	A[Feature map] -->|Inner product|B[Kernel];
-​	B -->|Moore-Aronszajn Thm| C[RKHS];
-​	C -->|Riesz Reprensentation Thm| A;
-
-{% endmermaid %}
+<div class="mermaid">
+    graph TD;
+	A[Feature map] -->|Inner product|B[Kernel];
+	B -->|Moore-Aronszajn Thm| C[RKHS];
+	C -->|Riesz Reprensentation Thm| A;
+</div>
 
 
 
