@@ -24,7 +24,7 @@ mathjax: true
 >
 > A function $k: \mathcal{X} \times \mathcal{X} \rightarrow \mathbb{R}$ is a **positive semidefinite (PSD) kernel** (or more simply, a **kernel**) if and only if for every finite set of points $x_1, \cdots, x_n \in \mathcal{X}$, the **kernel matrix** $K \in \mathbb{R}^{n \times n}$ defined by $K_{ij} = k(x_i, x_j)$ is positive semidefinite.
 
-* Note: It is a generalization of positive semidefinite (PSD) matrix in the sense that *every finite observation* of kernel is a PSD matrix.
+* Note: It is a generalization of positive semidefinite (PSD) matrix in the sense that *every finite principal sumbmatrix* of the kernel is a PSD matrix.
 
 ## Three views on RKHS
 
