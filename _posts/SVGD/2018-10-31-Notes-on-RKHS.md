@@ -333,10 +333,12 @@ Now our last direction is kernel-RKHS, i.e. a kernel defines RKHS uniquely.
 > \end{eqnarray}
 > $$
 > To prove **uniqueness**, let $\mathcal{G}$ be another Hilbert space of functions for which $k(\cdot, \cdot)$ is a reproducing kernel. For any $x, y \in \mathcal{X}$,
->
-> $$\begin{eqnarray}\big< k(x, \cdot), k(y, \cdot) \big>_{\mathcal{H}} = k(x,y) = \big< k(x, \cdot), k(y, \cdot) \big>_{\mathcal{G}}.\end{eqnarray}$$
->
-> By linearity, $\big< \cdot, \cdot \big>_{\mathcal{H}} = \big< \cdot, \cdot \big>_{\mathcal{G}}$ on the span of $\{k(x,\cdot): x \in \mathcal{X}\}$. Therefore, $\mathcal{H} \subseteq \mathcal{G}$ because $\mathcal{G}$ is complete and contains $\mathcal{H}_0$.
+> $$
+> \begin{eqnarray}
+> \big< k(x, \cdot), k(y, \cdot) \big>_{\mathcal{H}} = k(x,y) = \big< k(x, \cdot), k(y, \cdot) \big>_{\mathcal{G}}.
+> \end{eqnarray}
+> $$
+> By linearity, $$\big< \cdot, \cdot \big>_{\mathcal{H}} = \big< \cdot, \cdot \big>_{\mathcal{G}}​$$ on the span of $$\{k(x,\cdot): x \in \mathcal{X}\}​$$. Therefore, $$\mathcal{H} \subseteq \mathcal{G}​$$ because $$\mathcal{G}​$$ is complete and contains $$\mathcal{H}_0​$$.
 >
 >
 > Let $f \in \mathcal{G}$. Since $\mathcal{H}$ is a closed subspace of $\mathcal{G}$, we can write $f = f_{\mathcal{H}} + f_{\mathcal{H}^{\perp}}$ where $f_{\mathcal{H}} \in \mathcal{H}$ and $f_{\mathcal{H}^{\perp}}\in \mathcal{H}^{\perp}$. Now if $x \in \mathcal{X}$, since $k(\cdot, \cdot)$ is a reproducing kernel of $\mathcal{G}$, we have
