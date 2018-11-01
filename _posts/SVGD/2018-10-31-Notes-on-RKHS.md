@@ -30,7 +30,7 @@ mathjax: true
 
 So from now on, we would like to understand this diagram completely!!!
 
-<img src="img/2018-10-31-Notes-on-RKHS/three-view.png" height="150px">
+<img src="img/2018-10-31-Notes-on-RKHS/three-view.png" height="300px">
 
 * Feature map $(\phi : \mathcal{X} \rightarrow \mathbb{R}^d)$: Yeah, that **feature map** which we encounter in machine learning everyday.
 * Kernel : We already define what kernel means mathematically. Although this is enough to progress our story, stop here and check what situation do we meet kernel in detailed setting.
