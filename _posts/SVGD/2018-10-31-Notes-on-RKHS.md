@@ -181,7 +181,7 @@ Now take an example of linear functional.
 
 
 
-If a linear functional is **bounded** (or equivalently **continuous**), we can do various analysis about that functional.
+If a linear functional is **bounded**, we can do various analysis about that functional.
 
 > **Definition** Bounded functional
 >
@@ -199,7 +199,7 @@ If a linear functional is **bounded** (or equivalently **continuous**), we can d
 
 
 
-* Note: If our functional $L$ is **linear**,  **boundedness** is a necessary and sufficient condition of  **continuity** .
+* Note: If our functional $L$ is **linear**, the  **boundedness** is a necessary and sufficient condition of  **continuity** .
 
 So our main subject **Reproducing Kernel Hilbert Space** (RKHS) demand that *any evaluation functional $L_x$ is a bounded linear functional.*
 
@@ -260,7 +260,7 @@ Now our last direction is kernel-RKHS, i.e. a kernel defines RKHS uniquely.
 
 > **Theorem** Moore-Aronszajn Theorem
 >
-> Given a kernel $k(\cdot, \cdot)$, there exists a (unique) Hilbret space of functions on $\mathcal{X}$ for which $k(\cdot,\cdot)$ is a **reproducing kernel.**
+> Given a kernel $k(\cdot, \cdot)$, there exists a  unique Hilbret space of functions on $\mathcal{X}$ for which $k(\cdot,\cdot)$ is a **reproducing kernel.**
 
 > **proof**. We want to construct a RKHS $\mathcal{H}$ from the set of functions $\{k(x,\cdot): x\in \mathcal{X}\}$ .
 >
@@ -282,7 +282,7 @@ Now our last direction is kernel-RKHS, i.e. a kernel defines RKHS uniquely.
 >
 >
 >
-> Now we need  **inner product** and **bounded for evaluation functional** for RKHS. (In here, we will not prove the uniqueness.)
+> Now we need  **inner product** and **bounded for evaluation functional** for RKHS.
 >
 > First, **inner product** can be defined as
 > $$
@@ -320,7 +320,7 @@ Now our last direction is kernel-RKHS, i.e. a kernel defines RKHS uniquely.
 >
 >    If $c^{\top}\alpha <0$, then positive $b$ whose absolute value is sufficiently small makes equation (27) contradiction.
 >
->    Therefore, $f_m(y) = c^{\top}\alpha = 0, \forall m \in \mathbb{N}$  and $f(y) = \lim_{m\rightarrow \infty}f_m(y) = 0$  .
+>    Therefore, $f_m(y) =\sum_{i=1}^{m} \alpha_i k(x_i,y) = c^{\top}\alpha = 0, \forall m \in \mathbb{N}$  and $f(y) = \lim_{m\rightarrow \infty}f_m(y) = 0$  .
 >
 > To check **bounded for evaluation functionals**, 
 > $$
@@ -329,10 +329,23 @@ Now our last direction is kernel-RKHS, i.e. a kernel defines RKHS uniquely.
 > &= \sum_{i=1}^{m} \alpha_i k(x_i, x)\\
 > &= \big< f, k(x, \cdot)\big>\\
 > &\le \|f\|_{\mathcal{H}}\|k(x,\cdot)\|_{\mathcal{H}}\\
-> &=  \|f\|_{\mathcal{H}} k(x,x). \square
+> &=  \|f\|_{\mathcal{H}} k(x,x).
 > \end{eqnarray}
 > $$
+> To prove **uniqueness**, let $\mathcal{G}$ be another Hilbert space of functions for which $k(\cdot, \cdot)$ is a reproducing kernel. For any $x, y \in \mathcal{X}$,
 >
+> $$\begin{eqnarray}\big< k(x, \cdot), k(y, \cdot) \big>_{\mathcal{H}} = k(x,y) = \big< k(x, \cdot), k(y, \cdot) \big>_{\mathcal{G}}.\end{eqnarray}$$
+>
+> By linearity, $\big< \cdot, \cdot \big>_{\mathcal{H}} = \big< \cdot, \cdot \big>_{\mathcal{G}}$ on the span of $\{k(x,\cdot): x \in \mathcal{X}\}$. Therefore, $\mathcal{H} \subseteq \mathcal{G}$ because $\mathcal{G}$ is complete and contains $\mathcal{H}_0$.
+>
+>
+> Let $f \in \mathcal{G}$. Since $\mathcal{H}$ is a closed subspace of $\mathcal{G}$, we can write $f = f_{\mathcal{H}} + f_{\mathcal{H}^{\perp}}$ where $f_{\mathcal{H}} \in \mathcal{H}$ and $f_{\mathcal{H}^{\perp}}\in \mathcal{H}^{\perp}$. Now if $x \in \mathcal{X}$, since $k(\cdot, \cdot)$ is a reproducing kernel of $\mathcal{G}$, we have
+> $$
+> \begin{eqnarray}
+> f(x) = \big< f, k(x,\cdot)\big> = \big< f_{\mathcal{H}}, k(x, \cdot) \big> = f_{\mathcal{H}}(x)
+> \end{eqnarray}
+> $$
+> which shows that $f_{\mathcal{H}^{\perp}} = 0$ and this makes $\mathcal{G} \subseteq \mathcal{H}$. $\square$
 
 
 
