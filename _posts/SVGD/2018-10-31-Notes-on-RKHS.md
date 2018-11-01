@@ -32,9 +32,9 @@ So from now on, we would like to understand this diagram completely!!!
 
 <div class="mermaid">
     graph TD;
-	A[Feature map] -->|Inner product|B[Kernel];
-	B -->|Moore-Aronszajn Thm| C[RKHS];
-	C -->|Riesz Reprensentation Thm| A;
+		A[Feature map] -->|Inner product|B[Kernel];
+		B -->|Moore-Aronszajn Thm| C[RKHS];
+		C -->|Riesz Reprensentation Thm| A;
 </div>
 
 
