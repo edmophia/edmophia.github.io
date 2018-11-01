@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: Notes on RKHS (Part 1)
+title: Notes on RKHS-Part 1
 date: 2018-10-31
 tags: SVGD
 mathjax: true
 
 ---
 
-* **Remark** : This post is a rearrangement of [Percy Liang's statistical learning theory course 2016](https://web.stanford.edu/class/cs229t/notes.pdf).
+* **Remark** : This post is a rearrangement of [Percy Liang's statistical learning theory course 2016](https://web.stanford.edu/class/cs229t).
 
 - [Notes on RKHS](#notes-on-rkhs)
   * [What is Kernel?](#what-is-kernel-)
