@@ -30,6 +30,16 @@ mathjax: true
 
 So from now on, we would like to understand this diagram completely!!!
 
+```mermaid
+graph TD;
+A[Feature map] -->|Inner product|B[Kernel];
+	B -->|Moore-Aronszajn Thm| C[RKHS];
+	C -->|Riesz Reprensentation Thm| A;
+
+```
+
+
+
 <img src="img/2018-10-31-Notes-on-RKHS/three_view.png" height="150px">
 
 * Feature map $(\phi : \mathcal{X} \rightarrow \mathbb{R}^d)$: Yeah, that **feature map** which we encounter in machine learning everyday.
