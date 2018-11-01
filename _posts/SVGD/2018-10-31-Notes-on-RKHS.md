@@ -32,7 +32,7 @@ So from now on, we would like to understand this diagram completely!!!
 
 <img src="img/2018-10-31-Notes-on-RKHS/three_view.png" height="150px">
 
-* Feature map $(\phi : \mathcal{X}\rightarrow \mathcal{H})$: Yeah, that **feature map** which we encounter in machine learning everyday.
+* Feature map $(\phi : \mathcal{X} \rightarrow \mathbb{R}^d)$: Yeah, that **feature map** which we encounter in machine learning everyday.
 * Kernel : We already define what kernel means mathematically. Although this is enough to progress our story, stop here and check what situation do we meet kernel in detailed setting.
 
 ### Predict, Experience and Backpropagate
@@ -130,8 +130,9 @@ Now back to the three views on RKHS, we define our main subject **Reproducing Ke
 > 2. **(Linearity)** $\big<c_1x_1, c_2x_2, y\big> = c_1 \big< x_1, y\big> + c_2 \big< x_2, y\big>$,  $\forall x_1,x_2,y \in \mathcal{H}, \forall c_1, c_2 \in \mathbb{F}$.
 > 3. **(Positive Definite)** $\big< x, x \big> \ge 0$ and equality holds only if $x = 0$.
 
-* Note1: The inner product of a Hilbert space $\mathcal{H}$ gives a natural norm $$\|x\|_{\mathcal{H}} = \sqrt{\big<x,x\big>}$$.
-* Note2: The natural norm in Note1 gives a natural metric $$d_{\mathcal{H}}(x,y) = \|x-y\|_{\mathcal{H}}$$. So the complete vector space in above definition actually means *complete metric space*, any cauchy sequence converges. 
+* Note1: In here, the Hilbert space $\mathcal{H}$ usually means **good functions** whose domain is $\mathcal{X}$ and codomain is $\mathbb{R}^d$. (We don't need to worry about what is good, but we can think our Hilbert space is $L^2$,in most time. ) 
+* Note2: The inner product of a Hilbert space $\mathcal{H}$ gives a natural norm $$\|x\|_{\mathcal{H}} = \sqrt{\big<x,x\big>}$$.
+* Note3: The natural norm in Note1 gives a natural metric $$d_{\mathcal{H}}(x,y) = \|x-y\|_{\mathcal{H}}$$. So the complete vector space in above definition actually means *complete metric space*, any cauchy sequence converges. 
 
 In Hilbert space, we call a function $L$ which maps an element of $\mathcal{H}$ to an element of  $\mathbb{R}$ **functional**.
 
@@ -220,4 +221,4 @@ $$
   &= R_{x_j}(x_i).
   \end{eqnarray}
   $$
-  And this can be seen as an inner product of two maps (in fact these are **feature maps**) $R_{x_i}, R_{x_j}:\in \mathcal{H}$. In equation (9), we saw that an inner product of two feature maps is a kernel.
+  And this can be seen as an inner product of two maps (in fact these are **feature maps**) $R_{x_i}, R_{x_j}\in \mathcal{H}$. In equation (9), we saw that an inner product of two feature maps is a kernel.
