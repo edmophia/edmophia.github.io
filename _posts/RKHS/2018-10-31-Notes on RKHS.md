@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: Notes on RKHS-WIP
+title: Notes on RKHS (Part 1)
 date: 2018-10-31
 tags: RKHS
 mathjax: true
@@ -169,7 +169,7 @@ If a linear functional is **bounded** (or equivalently **continuous**), we can d
 * Note1: If our functional $L$ is **linear**,  **boundedness** is a necessary and sufficient condition of  **continuity** .
 * Note2: By Riesz, any bounded linear functional can be represented as a inner product between an element of dual space.
 
-So our main subject **Reproducing Kernel Hilbert Space (RKHS)** demand that *any evaluation functional $L_x$ is a bounded linear functional.*
+So our main subject **Reproducing Kernel Hilbert Space** (RKHS) demand that *any evaluation functional $L_x$ is a bounded linear functional.*
 
 > **Definition** Reproducing Kernel Hilbert Space (RKHS)
 >
