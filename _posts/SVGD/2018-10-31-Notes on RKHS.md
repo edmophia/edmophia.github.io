@@ -14,6 +14,7 @@ mathjax: true
   * [What is Kernel?](#what-is-kernel-)
   * [Three views on RKHS](#three-views-on-rkhs)
     + [Predict, Experience and Backpropagate](#predict--experience-and-backpropagate)
+    + [The Riesz Representation Theorem](#the-riesz-representation-theorem)
 
 # Notes on RKHS
 
@@ -163,13 +164,16 @@ If a linear functional is **bounded** (or equivalently **continuous**), we can d
 >
 > $$
 > \begin{eqnarray}
-> | L(f) | \le M \|f\|_{\mathcal{H}}, \forall f \in \mathcal{H}
+> | L(f) | \le M \|f\|_{\mathcal{H}}, \forall f \in \mathcal{H}.
 > \end{eqnarray}
 > $$
 >
+>
+>
 
-* Note1: If our functional $L$ is **linear**,  **boundedness** is a necessary and sufficient condition of  **continuity** .
-* Note2: By Riesz, any bounded linear functional can be represented as a inner product between an element of dual space.
+
+
+* Note: If our functional $L$ is **linear**,  **boundedness** is a necessary and sufficient condition of  **continuity** .
 
 So our main subject **Reproducing Kernel Hilbert Space** (RKHS) demand that *any evaluation functional $L_x$ is a bounded linear functional.*
 
@@ -177,3 +181,43 @@ So our main subject **Reproducing Kernel Hilbert Space** (RKHS) demand that *any
 >
 > A Reproducing Kernel Hilbert Space (RKHS) $\mathcal{H}$ is a Hilbert space over functions $f : \mathcal{X} \rightarrow \mathbb{R}$ such that for each $x \in \mathcal{X}$, the evaluation functional $L_x$ is bounded.
 
+
+
+## The Riesz Representation Theorem
+
+
+
+A useful result that can be applied to RKHS is the Riesz Representation Theorem.
+
+
+
+> **Theorem** The Riesz Representation Theorem
+>
+> If $L: \mathcal{H} \rightarrow \mathbb{R}$ is a bounded linear functional, then there is a unique vector $g \in \mathcal{H}$ such that a 
+> $$
+> \begin{eqnarray}
+> L(f) = \big< f,g \big>,\forall f \in \mathcal{H}.
+> \end{eqnarray}
+> $$
+> Moreover, $$\|L\| = \|g\|$$.
+
+
+
+Since any evaluation functional $L_x$ of RKHS is *bounded linear functional*, we can find a function $R_x$ in RKHS such that 
+$$
+\begin{eqnarray}
+f(x) = L_x(f) = \big< f, R_x\big>, \forall f \in \mathcal{H}.
+\end{eqnarray}
+$$
+
+* Note: $R_x$ also lives in RKHS. So if we have two points $x_i, x_j \in \mathcal{X}$
+  $$
+  \begin{eqnarray}
+  R_{x_i}(x_j) &= L_{x_j}(R_{x_i})\\
+  &= \big< R_{x_i}, R_{x_j} \big>\\
+  &= \big< R_{x_j}, R_{x_i} \big>\\
+  &= L_{x_i}(R_{x_j})\\
+  &= R_{x_j}(x_i).
+  \end{eqnarray}
+  $$
+  And this can be seen as an inner product of two maps (in fact these are **feature maps**)$R_{x_i}, R_{x_j}: \mathcal{X} \rightarrow \mathcal{H}$. In equation (9), we saw that an inner product of two feature maps is a kernel.
