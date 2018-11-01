@@ -85,7 +85,9 @@ So back to our *approximate optimal solution* the prediction can be denoted as
 
 $$
 \begin{eqnarray}
-\hat{y} = \big<w^{OPT}, \phi(x)\big> = \big< \sum_{t=1}^T\sum_{n=1}^n \alpha_i^t\phi(x_i), \phi(x)\big> = \sum_{t=1}^T\sum_{n=1}^n \alpha_i^t \big< \phi(x_i), \phi(x) \big>
+\hat{y} &= \big<w^{OPT}, \phi(x)\big>\\
+&= \big< \sum_{t=1}^T\sum_{n=1}^n \alpha_i^t\phi(x_i), \phi(x)\big>\\
+&= \sum_{t=1}^T\sum_{n=1}^n \alpha_i^t \big< \phi(x_i), \phi(x) \big>
 \end{eqnarray}
 $$
 
@@ -111,7 +113,7 @@ $$
 
 
 
-* Note: Soon we will see that $k(\cdot, \cdot)$ in equation (7) is a PSD kernel in the very first definition.
+* Note: Soon we will see that $k(\cdot, \cdot)$ in equation (9) is a PSD kernel in the very first definition.
 
 
 
@@ -127,10 +129,10 @@ Now back to the three views on RKHS, we define our main subject **Reproducing Ke
 > 2. **(Linearity)** $\big<c_1x_1, c_2x_2, y\big> = c_1 \big< x_1, y\big> + c_2 \big< x_2, y\big>$,  $\forall x_1,x_2,y \in \mathcal{H}, \forall c_1, c_2 \in \mathbb{F}$.
 > 3. **(Positive Definite)** $\big< x, x \big> \ge 0$ and equality holds only if $x = 0$.
 
-* Note1: The inner product of a Hilbert space $\mathcal{H}$ gives a natural norm $\|x\|_{\mathcal{H}} = \sqrt{\big<x,x\big>}$.
-* Note2: The natural norm in Note1 gives a natural metric $d_{\mathcal{H}}(x,y) = \|x-y\|_{\mathcal{H}}$. So the complete vector space in above definition actually means *complete metric space*, any cauchy sequence converges. 
+* Note1: The inner product of a Hilbert space $\mathcal{H}$ gives a natural norm $$\|x\|_{\mathcal{H}} = \sqrt{\big<x,x\big>}$$.
+* Note2: The natural norm in Note1 gives a natural metric $$d_{\mathcal{H}}(x,y) = \|x-y\|_{\mathcal{H}}$$. So the complete vector space in above definition actually means *complete metric space*, any cauchy sequence converges. 
 
-In Hilbert space, we call a function $L$ which maps an element of $\mathcal{H}$ to $\mathbb{R}$ (or more generally field), **functional**.
+In Hilbert space, we call a function $L$ which maps an element of $\mathcal{H}$ to an element of  $\mathbb{R}$ **functional**.
 
 Moreover in most time, we are interested in the functional  $L$ is linear, i.e. $L(cx + y)  = cL(x) + L(y), \forall x, y \in \mathcal{H}, \forall c \in \mathbb{R}$.
 
