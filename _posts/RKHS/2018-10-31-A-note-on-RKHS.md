@@ -3,7 +3,7 @@
 layout: post
 title: A Note on RKHS
 date: 2018-10-31
-tags: SVGD
+tags: RKHS
 mathjax: true
 
 ---
