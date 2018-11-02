@@ -209,7 +209,7 @@ So our main subject **Reproducing Kernel Hilbert Space** (RKHS) demand that *any
 
 
 
-# Moore-Aronszajn TheoremThe Riesz Representation Theorem
+# Moore-Aronszajn Theorem
 
 
 
