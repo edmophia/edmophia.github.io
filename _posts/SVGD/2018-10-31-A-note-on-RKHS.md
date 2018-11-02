@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: Notes on RKHS-Part 1
+title: A Note on RKHS
 date: 2018-10-31
 tags: SVGD
 mathjax: true
@@ -10,7 +10,7 @@ mathjax: true
 
 * **Remark** : This post is a rearrangement of [Percy Liang's statistical learning theory course 2016](https://web.stanford.edu/class/cs229t).
 
-- [Notes on RKHS](#notes-on-rkhs)
+- [A Note on RKHS](#a-note-on-rkhs)
   * [What is Kernel?](#what-is-kernel-)
   * [Three views on RKHS](#three-views-on-rkhs)
     + [Predict, Experience and Backpropagate](#predict--experience-and-backpropagate)
@@ -18,7 +18,7 @@ mathjax: true
   * [The Riesz Representation Theorem](#the-riesz-representation-theorem)
   * [Moore-Aronszajn Theorem](#moore-aronszajn-theorem)
 
-# Notes on RKHS
+# A Note on RKHS
 
 ## What is Kernel?
 
